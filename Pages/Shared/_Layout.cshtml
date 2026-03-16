@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - projectuge_1</title>
+    <script type="importmap"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/header.css" />
+    <link rel="stylesheet" href="~/projectuge_1.styles.css" asp-append-version="true" />
+    
+</head>
+    
+<body>
+<header>
+    <div class="header">
+        <div class="logo-wrapper">
+            <img class="logo" src="~/images/logo.png"/>
+        </div>
+
+        <div class="dropdown">
+            <button onclick="window.location.href='/bands'">Bands</button>
+            <div class="dropdown-content">
+                <a asp-page="/bands/gasolin">Gasolin</a>
+                <a href="https://www.google.com">Led Zeppelin</a>
+                <a href="https://www.google.com">The Rolling Stones</a>
+                <a href="https://www.google.com">View All</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button>Besøg os</button>
+            <div class="dropdown-content">
+                <a href="https://museumragnarock.dk/planlaeg-dit-besoeg/">Planlæg dit besøg</a>
+                <a href="https://museumragnarock.dk/detsker/">Arrangementer & aktiviteter</a>
+                <a href="https://museumragnarock.dk/rundvisninger-og-grupper/">Book rundvisning</a>
+                <a href="https://museumragnarock.dk/kontakt-presse/">Kontakt os</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button>Hvad tilbyder vi</button>
+            <div class="dropdown-content">
+                <a href="https://museumragnarock.dk/udstillinger/">Vores udstillinger</a>
+                <a href="https://museumragnarock.dk/cafe/">Mad og drikke</a>
+                <a href="https://museumragnarock.dk/undervisning/">Undervisning</a>
+                <a href="https://museumragnarock.dk/moedelokale-roskilde/">Mødelokaler og udlejning</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button onclick="window.location.href='https://shop.museumragnarock.dk/'">
+                Webshop
+            </button>
+        </div>
+
+        <div class="dropdown">
+            <button>Om Rockmuseet</button>
+            <div class="dropdown-content">
+                <a href="https://museumragnarock.dk/medarbejdere/">Medarbejdere</a>
+                <a href="https://museumragnarock.dk/arkitekturen/">Arkitekturen</a>
+                <a href="https://museumragnarock.dk/nyhedsarkiv/">Nyhedsarkiv</a>
+            </div>
+        </div>
+    </div>
+
+</header>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2026 - projectuge_1 - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,71 @@
+/* full width black background */
+header {
+    background-color: black;
+    padding: 2rem 0;
+}
+
+/* container for the content */
+.header {
+    display: flex;
+    align-items: center;
+
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* logo size */
+.logo {
+    height: 6.5rem;
+    width: auto;
+    margin-right: auto;
+}
+
+.logo-wrapper {
+    margin-right: auto;
+}
+
+/* spacing between dropdowns */
+.dropdown {
+    position: relative;
+    margin-left: 1.5rem;
+}
+
+/* dropdown buttons */
+.dropdown button {
+    background-color: black;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* hover effect */
+.dropdown button:hover {
+    color: darkred;
+}
+
+/* dropdown menu */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    min-width: 11rem;
+}
+
+/* dropdown links */
+.dropdown-content a {
+    display: block;
+    padding: 0.6rem 0.8rem;
+    text-decoration: none;
+    color: white;
+}
+
+/* hover for dropdown items */
+.dropdown-content a:hover {
+    color: darkred;
+}
+
+/* show menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
