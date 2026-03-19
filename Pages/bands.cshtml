@@ -38,21 +38,77 @@
 
 
 
-<!-- Bands text-->
-
-<div>
-        <div class="content-container">
-            <h4>Lær mere om</h4>
-            <h2 style="margin-top:0.25rem">Rockmuseet's band udstillinger! </h2>
+<div class="content-container">
+    
+    <div class="text-and-photo-container">
+        
+        <div class="text-box">
+            <h5>lær mere om</h5>
+            <h1>vores band udstillinger</h1>
+            <div style="width: 44px; height: 2px; background: #8b4a2e; margin-bottom: 1.4rem;"></div>
             <p>Rockmuseet rummer et bredt udvalg af udstillinger, der dykker ned i historien om både danske og internationale bands. 
                 Her kan man opleve alt fra ikoniske koncertøjeblikke til personlige historier og originale genstande fra musikernes karrierer. 
                 Museet giver et unikt indblik i, hvordan musikken har udviklet sig gennem tiden, og hvordan forskellige bands har sat deres præg på kulturen.</p>
-            
             <p>Et godt eksempel er Gasolin, som er et af de mest betydningsfulde danske rockbands. I deres udstilling kan man lære om bandets rejse, 
                 deres største hits og deres indflydelse på dansk rockmusik. Gennem billeder, lyd og genstande får man en levende oplevelse af deres tid 
                 og betydning.</p>
-            
             <p> Uanset om man er stor fan af rock eller bare nysgerrig, er der noget at opleve for alle på Rockmuseet.</p>
         </div>
+        
+        <img src="~/images/biography/franz-beckerlee/franz-beckerlee-1.png" class="image-biography">
+        
+    </div>
+</div>
+
+<div class="content-container">
+    
+    <h2 class="title-with-top-line">Lær lidt mere om instrumenterne</h2>
+    
+    <div class="objects-row">
+        
+        <div class="objects-unit object-guitar" onclick="togglePopup(this)">
+            <h3 class="objects-title">Guitar</h3>
+            <p class="objects-text">tryk for at lære mere</p>
+            
+            <div class="object-popup">
+                <p class="objects-text-hover">Guitaren er et af de vigtigste instrumenter i rockmusik. 
+                    Den skaber både rytme og melodi og er ofte centrum i mange bands. 
+                    Elguitaren har været med til at definere rockens lyd gennem tiden.</p>
+            </div>
+            
+        </div>
+        
+        <div class="objects-unit object-keyboard" onclick="togglePopup(this)">
+            <h3 class="objects-title">Keyboard</h3>
+            <p class="objects-text">tryk for at lære mere</p>
+            
+            <div class="object-popup">
+                <p class="objects-text-hover">Keyboardet giver musikken dybde og variation med mange forskellige lyde. 
+                    Det bruges både til at skabe stemning og til at understøtte melodier. 
+                    I moderne musik spiller det en stor rolle i både rock og pop.</p>
+            </div>
+            
+        </div>
+        
+        <div class="objects-unit object-drums" onclick="togglePopup(this)">
+            <h3 class="objects-title">Trommer</h3>
+            <p class="objects-text">tryk for at lære mere</p>
+            
+            <div class="object-popup">
+                <p class="objects-text-hover">Trommerne er fundamentet i musikken og styrer tempoet. 
+                    De holder rytmen og binder bandet sammen. 
+                    Uden trommer ville musikken mangle energi og struktur.</p>
+            </div>
+            
+        </div>
+        
+    </div>
     
 </div>
+
+
+<script>
+    function togglePopup(element) {
+    element.classList.toggle("active");
+    }
+</script>

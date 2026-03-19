@@ -108,3 +108,28 @@ body {
     display: flex;
     justify-content: space-between;
 }
+
+@media (max-width: 768px) {
+
+    .header {
+        width: 100%;
+        padding: 0 1rem;
+        flex-wrap: wrap; /* allows wrapping instead of overflow */
+    }
+
+    .logo {
+        height: 4rem;
+    }
+
+    .dropdown {
+        margin-left: 0.8rem;
+    }
+
+    .dropdown button {
+        font-size: 0.8rem;
+    }
+
+    .dropdown-content {
+        min-width: 9rem;
+    }
+}

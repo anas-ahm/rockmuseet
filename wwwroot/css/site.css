@@ -98,6 +98,10 @@ p {
     text-align: left;
 }
 
+.text-box-right {
+    flex: 1;
+    text-align: right;
+}
 
 .photo-box {
    flex: 1;
@@ -228,8 +232,143 @@ p {
 }
 
 /* Video */
-.video {
-    width: 100%; 
-    max-width:  50rem;
+.youtube-video {
+    width: 100%;
     border-radius: 8px;
+    height: 40rem;
+}
+
+/* Objects */
+.objects-row {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.objects-unit {
+    flex: 1;
+    background: #f5f0e8;
+    border-radius: 10px;
+    height: 25rem; 
+    padding: 2rem;
+    text-align: center;
+    cursor: pointer; 
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.objects-unit:hover {
+    transform: translateY(-5px);
+    border-color: #8b4a2e;
+}
+
+.objects-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    position: absolute;
+    bottom: 3rem;   /* distance from bottom */
+    left: 2rem;     /* distance from left */
+    color: white;
+    
+}
+
+.objects-text {
+    font-size: 0.9rem;
+    color: white;
+    position: absolute;
+    bottom: 1.5rem; /* distance from bottom  */
+    left: 2rem; /* distance from left */
+}
+
+.object-guitar {
+    background-image: url('/images/objects/guitar.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.object-keyboard {
+    background-image: url('/images/objects/keyboard.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.object-drums {
+    background-image: url('/images/objects/drums.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.object-popup {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: black;
+    display: flex;
+    justify-content: center; 
+    align-items: center;      
+    text-align: center;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.25s ease;
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+.object-popup p {
+    color: white;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    
+}
+
+/* hover for desktop */
+.objects-unit:hover .object-popup {
+    opacity: 1;
+    pointer-events: auto;
+    text-align: center;
+}
+
+/* click for mobile */
+.objects-unit.active .object-popup {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Phone optimizing */
+@media (max-width: 768px) {
+
+    .content-container {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .text-and-photo-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-biography {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .audio-player {
+        width: 100%;
+    }
+
+    .song-options {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
 }
