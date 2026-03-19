@@ -1,28 +1,58 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
+
+<!-- Head -->
+
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>@ViewData["Title"] - projectuge_1</title>
     <script type="importmap"></script>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/css/header.css" />
-    <link rel="stylesheet" href="~/projectuge_1.styles.css" asp-append-version="true" />
-    
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Css -->
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/css/header.css"/>
+    <link rel="stylesheet" href="~/css/bands.css"/>
+    <link rel="stylesheet" href="~/projectuge_1.styles.css" asp-append-version="true"/>
 </head>
-    
+
+
+<!-- Body starts here -->
+
 <body>
+
+
+
+<!-- Header for the whole page-->
+
 <header>
     <div class="header">
         <div class="logo-wrapper">
-            <img class="logo" src="~/images/logo.png"/>
+            <img class="logo" src="~/images/logo.png" onclick="window.location.href='/'"/>
         </div>
 
         <div class="dropdown">
             <button onclick="window.location.href='/bands'">Bands</button>
+
             <div class="dropdown-content">
-                <a asp-page="/bands/gasolin">Gasolin</a>
+                <div class="dropdown-right">
+
+                    <a asp-page="/bands/gasolin">Gasolin ▸</a>
+
+                    <div class="dropdown-right-content">
+                        <a asp-page="/bands/gasolin/biography-kim-larsen">Kim Larsen</a>
+                        <a asp-page="/bands/gasolin/biography-franz-beckerlee">Franz Beckerlee</a>
+                        <a asp-page="/bands/gasolin/biography-wili-jonsson">Wili Jønsson</a>
+                        <a asp-page="/bands/gasolin/biography-soren-berlev">Søren Berlev</a>
+                        <a asp-page="/bands/gasolin/biography-bjorn-uglebjerg">Bjørn Uglebjerg</a>
+                    </div>
+                </div>
+
+
                 <a href="https://www.google.com">Led Zeppelin</a>
                 <a href="https://www.google.com">The Rolling Stones</a>
                 <a href="https://www.google.com">View All</a>
@@ -67,22 +97,30 @@
 
 </header>
 
+
+<!-- content section - all pages made are shown here -->
+
+<div >
+    <main role="main">
+        @RenderBody()
+    </main>
+</div>
+
+
+
+<!-- Footer -->
+
+<footer class="footer">
     <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+        &copy; 2026 - Rockmuseet - <a asp-area="" asp-page="/Privacy">Privacy</a>
     </div>
+</footer>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2026 - projectuge_1 - <a asp-area="" asp-page="/Privacy">Privacy</a>
-        </div>
-    </footer>
 
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
 
-    @await RenderSectionAsync("Scripts", required: false)
+<!-- Bootstrap script-->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
