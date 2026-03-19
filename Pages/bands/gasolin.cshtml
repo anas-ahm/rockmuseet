@@ -4,7 +4,200 @@
     ViewData["Title"] = "Gasolin";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Gasolin</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">Gasolin</a>.</p>
+
+
+<!-- Introduktion - text to the left, photo to the right -->
+
+<div class="content-container">
+    
+    <div class="text-and-photo-container">
+
+        <div class="text-box">
+            <h5 >band</h5>
+            <h1>Gasolin'</h1>
+            <div style="width: 44px; height: 2px; background: #8b4a2e; margin-bottom: 1.4rem;"></div>
+            <p>Gasolin’ var et af de mest betydningsfulde og elskede rockbands i dansk musikhistorie. Bandet blev dannet i København i 1969 og bestod af Kim Larsen, Franz Beckerlee, Wili Jønsson og senere Søren “Charlie” Berlev. Med deres unikke blanding af rå rock, poetiske tekster og folkelig appel formåede de at skabe et helt særligt udtryk, som ramte både ungdommen og den brede befolkning.</p>
+            <p>I løbet af 1970’erne udviklede Gasolin’ sig fra et eksperimenterende undergrundsband til et nationalt fænomen. Deres sange handlede om hverdagsliv, drømme og samfund, og de blev hurtigt en stemme for en hel generation. Med klassikere som Kvinde min, Rabalderstræde og This Is My Life satte de et varigt præg på dansk kultur.</p>
+            <p>Gasolin’ var ikke kun et band – de var en bevægelse. Deres energi på scenen, deres stærke personligheder og deres evne til at forene det folkelige med det kunstneriske gjorde dem til noget helt særligt. Selvom bandet gik i opløsning i 1978, lever deres musik og arv videre i dag som en central del af Danmarks rockhistorie.</p>
+        </div>
+
+        <img src="~/images/bands/gasolin/gasolin-1.png" class="image-biography" style="max-width: 27rem; max-height: 33.75rem">
+
+    </div>
+    
+</div>
+
+
+
+<!-- timeline photo section -->
+
+<div style="max-height: 30rem; overflow: hidden; margin-top: 4rem;">
+    <img src="~/images/tidslinje.png" style="max-width: 100%; height: 100%; object-fit: cover;">
+</div>
+
+
+
+<!-- Section with text to the Right, photo to the left -->
+
+<div class="content-container">
+    <div class="text-and-photo-container">
+
+        <img src="~/images/bands/gasolin/gasolin-2.png" class="image-biography" style="max-width: 27rem; max-height: 33.75rem">
+        
+        <div class="text-box">
+            <h2>Gasolin's historie</h2>
+            <div style="width: 44px; height: 2px; background: #8b4a2e; margin-bottom: 1.4rem;"></div>
+            <p>Gasolin’ opstod i en tid, hvor dansk rockmusik stadig var ved at finde sin egen identitet. Bandet skilte sig hurtigt ud med deres rå lyd og deres evne til at skrive tekster, som både var poetiske og lette at relatere til. De formåede at gøre rockmusik til noget, der føltes dansk og nærværende.</p>
+            <p>Deres gennembrud kom i starten af 1970’erne, hvor de begyndte at tiltrække et større publikum. Med stærke liveoptrædener og en karismatisk frontfigur i Kim Larsen blev de hurtigt et af landets mest populære bands. Publikum blev draget af både energien og ægtheden i deres musik.</p>
+            <p>Gasolin’s sange kredsede ofte om almindelige menneskers liv, drømme og udfordringer. De havde en særlig evne til at fortælle historier, som ramte bredt, uden at miste deres kunstneriske kant. Det gjorde dem til et band, som både kritikere og fans kunne samles om.</p>
+            <p>Selvom bandet forsøgte at slå igennem internationalt, var det især i Danmark, at de for alvor satte deres aftryk. Her blev de et kulturelt samlingspunkt og et symbol på en ny tid i dansk musik, hvor man turde eksperimentere og være sig selv.</p>
+        </div>
+    </div>
+</div>    
+    
+
+
+<!-- audio player-->
+
+<div class="content-container-gray-background">
+        
+    <!-- Song player section -->
+    <h2 style="text-align: center;margin-top:3rem">Lyt selv med her</h2>
+
+    <!-- this audioplayer is used to play and stop songs -->
+    <audio class="audio-player" id="audioPlayer" controls></audio>
+
+    <div class="content-container">
+
+        <div class="song-list">
+
+            <div class="song-options">
+                <!-- This for loop goes through all the songs in our list inside cshtml.cs file and creates that amount of boxes-->
+                <!-- For instance, lets say that we have 4 songs inside the list, it creates 4 buttons to click-->
+                @foreach (var song in Model.Songs)
+                {
+                    <!-- This is the HTML that gets created each loop-->
+                    <div class="song-box">
+                        <p class="song-title">@song.Title</p>
+                        <button class="audio-start-button" onclick="playSong('@song.FilePath')">Play</button>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Javascript starts here-->
+
+<script>
+    const player = document.getElementById("audioPlayer");
+
+    function playSong(filePath) {
+        
+        // Here we're just saying that if the selected song is already playing and the music isnt pause do nothing
+        if (player.src.includes(filePath) && !player.paused) {
+            return;
+        }
+
+        player.src = filePath; // if the if statement is met, use the same filePath
+        player.loop = true; // if the if statement is met, repeat the song
+        player.play(); // if the if statement is met, start the song again
+    }
+
+    //If user clicks on stop, the song pauses with player.pause(), then timer goes back to 0 with player.currentTime = 0
+    function stopSong() {
+        player.pause();
+        player.currentTime = 0;
+    }
+</script>    
+
+
+
+<!-- Ekstra info-->
+
+<div class="content-container">
+        
+    <div class="text-and-photo-container">
+
+        <div class="text-box">
+            
+            <h2>Vidste du?</h2>
+            <div style="width: 44px; height: 2px; background: #8b4a2e; margin-bottom: 1.4rem;"></div>
+            <p>Gasolin’ udgav i alt syv studiealbums mellem 1971 og 1977, herunder klassikere som <i>Gasolin’ 3</i> og <i>Efter endnu en dag</i>. Deres samarbejde med produceren Roy Thomas Baker – kendt for sit arbejde med Queen – gav deres lyd et mere internationalt præg i midten af 1970’erne.</p>
+            <p>Bandet forsøgte også at slå igennem i udlandet og indspillede engelsksprogede versioner af flere sange. Selvom de opnåede en vis opmærksomhed internationalt, var det især i Danmark, de blev et ikonisk navn.</p>
+            <p>Gasolin’ er kendt for deres stærke liveoptrædener, hvor især Kim Larsens karisma og kontakt med publikum gjorde koncerterne til noget helt særligt. Deres koncert i Idrætsparken i 1976 regnes stadig som en af de mest legendariske i dansk rockhistorie.</p>
+            <p>Efter bandets opløsning i 1978 fik medlemmerne succes hver for sig – især Kim Larsen, som fortsatte med en stor solokarriere og senere bandet Kjukken.</p>
+            <p>I dag bliver Gasolin’ stadig hyldet som pionerer inden for dansk rock, og deres musik bliver ved med at inspirere både nye kunstnere og fans på tværs af generationer.</p>
+            
+        </div>
+
+        <img src="~/images/bands/gasolin/gasolin-1.png" class="image-biography" style="max-width: 27rem; max-height: 33.75rem">
+    </div>
+</div>
+
+
+
+<!-- html 5 video of gasolin -->
+
+<div class="content-container">
+        
+    <h2 class="title-with-top-line">
+        Se dem perform
+    </h2>
+    
+    <video controls class="video">
+        <source src="~/videos/strengelegen-live-final.mp4" type="video/mp4">
+        Video not available <!-- This text only appears if video is unavailable-->
+    </video>
+    
+    <p class="text-beneath-content">Strengelegen live af Gasolin' fra 1978!</p>
+        
+</div>    
+
+
+
+<!-- Gasolin band members biography -->
+
+<div class="content-container" style="margin-top:5rem">
+    
+    <h2>Lær bandmedlemerne bedre at kende!</h2>
+    
+    <div class="bands-row">
+        <a href="/Bands/gasolin/biography-kim-larsen" class="bands-units member-kim">
+            <div class="bands-info">
+                <h3 class="bands-title">Kim Larsen</h3>
+                <p class="bands-text">Sanger, Guitarist</p>
+            </div>
+        </a>
+
+        <a href="/Bands/gasolin/biography-franz-beckerlee" class="bands-units member-franz">
+            <div class="bands-info">
+                <h3 class="bands-title">Franz Beckerlee</h3>
+                <p class="bands-text">Guitarist</p>
+            </div>
+        </a>
+
+        <a href="/Bands/gasolin/biography-wili-jonsson" class="bands-units member-wili">
+            <div class="bands-info">
+                <h3 class="bands-title">Wili Jønsson</h3>
+                <p class="bands-text">Bassist</p>
+            </div>
+        </a>
+
+        <a href="/Bands/gasolin/biography-soren-berlev" class="bands-units member-soren">
+            <div class="bands-info">
+                <h3 class="bands-title">Søren Berlev</h3>
+                <p class="bands-text">Trommeslager</p>
+            </div>
+        </a>
+
+        <a href="/Bands/gasolin/biography-klaus-agerskov" class="bands-units member-bjorn">
+            <div class="bands-info">
+                <h3 class="bands-title">Bjørn Uglebjerg</h3>
+                <p class="bands-text">Tidligere Medlem</p>
+            </div>
+        </a>
+    </div>
 </div>

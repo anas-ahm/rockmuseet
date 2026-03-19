@@ -26,8 +26,32 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvYmFuZHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/anas.ahm/Documents/Coding/Datamatiker/Microprojects/rockmuseet og gasolin /Pages/bands/biography-template.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvYmFuZHMvYmlvZ3JhcGh5LXRlbXBsYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/anas.ahm/Documents/Coding/Datamatiker/Microprojects/rockmuseet og gasolin /Pages/bands/gasolin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvYmFuZHMvZ2Fzb2xpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/anas.ahm/Documents/Coding/Datamatiker/Microprojects/rockmuseet og gasolin /Pages/bands/gasolin/biography-bjorn-uglebjerg.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvYmFuZHMvZ2Fzb2xpbi9iaW9ncmFwaHktYmpvcm4tdWdsZWJqZXJnLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/anas.ahm/Documents/Coding/Datamatiker/Microprojects/rockmuseet og gasolin /Pages/bands/gasolin/biography-franz-beckerlee.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvYmFuZHMvZ2Fzb2xpbi9iaW9ncmFwaHktZnJhbnotYmVja2VybGVlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/anas.ahm/Documents/Coding/Datamatiker/Microprojects/rockmuseet og gasolin /Pages/bands/gasolin/biography-kim-larsen.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvYmFuZHMvZ2Fzb2xpbi9iaW9ncmFwaHkta2ltLWxhcnNlbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/anas.ahm/Documents/Coding/Datamatiker/Microprojects/rockmuseet og gasolin /Pages/bands/gasolin/biography-soren-berlev.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvYmFuZHMvZ2Fzb2xpbi9iaW9ncmFwaHktc29yZW4tYmVybGV2LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/anas.ahm/Documents/Coding/Datamatiker/Microprojects/rockmuseet og gasolin /Pages/bands/gasolin/biography-wili-jonsson.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvYmFuZHMvZ2Fzb2xpbi9iaW9ncmFwaHktd2lsaS1qb25zc29uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/anas.ahm/Documents/Coding/Datamatiker/Microprojects/rockmuseet og gasolin /Pages/Error.cshtml]

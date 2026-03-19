@@ -1,0 +1,137 @@
+.image-fluid {
+    width: 100%;
+    height: 35rem;
+    object-fit: cover;
+    background-color: black;
+}
+
+.default-text-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.default-text-title {
+    margin-bottom: 20px;
+}
+
+.default-text-text {
+    margin-bottom: 16px;
+    line-height: 1.7;
+}
+
+#myCarousel img {
+    width: 100%;
+    height: 40rem;
+    object-fit: cover;
+    background-color: black;
+    cursor: pointer;
+    filter: brightness(80%);
+}
+
+#myCarousel img:hover {
+    filter: brightness(60%); /* Makes banner darker on hover*/
+}
+
+/* Banner */
+.carousel-caption {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    bottom: auto; 
+    text-align: center;
+    cursor: pointer;
+}
+
+.carousel-caption h5 {
+    font-size: 5rem;
+}
+
+.carousel-caption p {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    color: sienna;
+}
+
+
+/* Gasolin band members */
+.bands-row {
+    display: flex;
+    flex-wrap: wrap;  /* This ensures that if the band cards take more space than the page, it puts them beneath */
+    gap: 16px;               
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.bands-units {
+    flex: 1 1 0; 
+    min-width: 140px;
+    position: relative;
+
+    display: block;          
+    text-decoration: none;        
+
+    background-color: #2a2a2a;
+    border-radius: 8px;
+    padding: 20px 16px;
+    height: 18rem;
+
+    /* Smooth darkening transition on hover */
+    transition: background-color 0.2s ease;
+}
+
+.bands-units:hover {
+    filter: brightness(0.75);
+    
+}
+
+.bands-info {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+.bands-title {
+    margin: 0 0 6px 0;    
+    font-size: 1.25rem;
+    color: white;
+    font-weight: 600;
+}
+
+.bands-text {
+    margin: 0;
+    color: white;
+    font-size: 0.85rem;
+}
+
+.member-kim {
+    background-image: url('/images/kimlarsen.png');
+    background-size: cover;      
+    background-position: center; 
+}
+
+.member-franz {
+    background-image: url('/images/franzbeckerlee.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.member-wili {
+    background-image: url('/images/wilijonnson.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.member-soren {
+    background-image: url('/images/sorengerlev.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.member-bjorn {
+    background-image: url('/images/bjornuglebjerg.png');
+    background-size: cover;
+    background-position: center;
+}
