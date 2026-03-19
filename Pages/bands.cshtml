@@ -4,7 +4,55 @@
     ViewData["Title"] = "Bands";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Bands</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">all the bands</a>.</p>
+
+
+<!-- Carousel from bootstrap -->
+
+<div class="container-fluid p-0">
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2500">
+
+        <div class="carousel-inner">
+
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+                <img src="~/images/gasolin.png" class="d-block w-100" onclick="window.location.href='/bands/gasolin'">
+
+                <div class="carousel-caption" onclick="window.location.href='/bands/gasolin'">
+                    <h5>Gasolin</h5>
+                    <p>Most iconic big danish band</p>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+                <img src="~/images/queen.png" class="d-block w-100" onclick="window.location.href='/bands/queen'">
+
+                <div class="carousel-caption" onclick="window.location.href='/bands/queen'">
+                    <h5>Queen</h5>
+                    <p>Iconic band</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Bands text-->
+
+<div>
+        <div class="content-container">
+            <h4>Lær mere om</h4>
+            <h2 style="margin-top:0.25rem">Rockmuseet's band udstillinger! </h2>
+            <p>Rockmuseet rummer et bredt udvalg af udstillinger, der dykker ned i historien om både danske og internationale bands. 
+                Her kan man opleve alt fra ikoniske koncertøjeblikke til personlige historier og originale genstande fra musikernes karrierer. 
+                Museet giver et unikt indblik i, hvordan musikken har udviklet sig gennem tiden, og hvordan forskellige bands har sat deres præg på kulturen.</p>
+            
+            <p>Et godt eksempel er Gasolin, som er et af de mest betydningsfulde danske rockbands. I deres udstilling kan man lære om bandets rejse, 
+                deres største hits og deres indflydelse på dansk rockmusik. Gennem billeder, lyd og genstande får man en levende oplevelse af deres tid 
+                og betydning.</p>
+            
+            <p> Uanset om man er stor fan af rock eller bare nysgerrig, er der noget at opleve for alle på Rockmuseet.</p>
+        </div>
+    
 </div>
