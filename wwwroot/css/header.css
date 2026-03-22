@@ -1,4 +1,3 @@
-/* full width black background */
 header {
     background-color: black;
     padding: 2rem 0;
@@ -9,7 +8,6 @@ body {
     margin: 0;
 }
 
-/* container for the content */
 .header {
     display: flex;
     align-items: center;
@@ -18,7 +16,6 @@ body {
     margin: 0 auto;
 }
 
-/* logo size */
 .logo {
     height: 6.5rem;
     width: auto;
@@ -33,13 +30,15 @@ body {
     margin-right: auto;
 }
 
-/* spacing between dropdowns */
+
+
+/* Dropdown menus*/
+
 .dropdown {
     position: relative;
     margin-left: 1.5rem;
 }
 
-/* dropdown buttons */
 .dropdown button {
     background-color: black;
     color: white;
@@ -48,12 +47,10 @@ body {
     cursor: pointer;
 }
 
-/* hover effect */
 .dropdown button:hover {
     color: darkred;
 }
 
-/* dropdown menu */
 .dropdown-content {
     display: none;
     position: absolute;
@@ -61,7 +58,6 @@ body {
     min-width: 11rem;
 }
 
-/* dropdown links */
 .dropdown-content a {
     display: block;
     padding: 0.6rem 0.8rem;
@@ -69,18 +65,12 @@ body {
     color: white;
 }
 
-/* hover for dropdown items */
 .dropdown-content a:hover {
     color: darkred;
 }
 
-/* show menu on hover */
 .dropdown:hover .dropdown-content {
     display: block;
-}
-
-.footer {
-    margin-top: 10rem;
 }
 
 /* drop down right menu */
@@ -109,12 +99,23 @@ body {
     justify-content: space-between;
 }
 
+
+/* Footer */
+
+.footer {
+    margin-top: 10rem;
+}
+
+
+
+/* Phone Optimizing */
+
 @media (max-width: 768px) {
 
     .header {
         width: 100%;
         padding: 0 1rem;
-        flex-wrap: wrap; /* allows wrapping instead of overflow */
+        flex-wrap: wrap;
     }
 
     .logo {

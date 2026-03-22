@@ -31,7 +31,7 @@
 }
 
 #myCarousel img:hover {
-    filter: brightness(60%); /* Makes banner darker on hover*/
+    filter: brightness(60%); 
 }
 
 /* Banner */
@@ -56,10 +56,12 @@
 }
 
 
+
 /* Gasolin band members */
+
 .bands-row {
     display: flex;
-    flex-wrap: wrap;  /* This ensures that if the band cards take more space than the page, it puts them beneath */
+    flex-wrap: wrap; 
     gap: 16px;               
     margin-top: 24px;
     margin-bottom: 24px;
@@ -69,16 +71,12 @@
     flex: 1 1 0; 
     min-width: 140px;
     position: relative;
-
     display: block;          
-    text-decoration: none;        
-
+    text-decoration: none;
     background-color: #2a2a2a;
     border-radius: 8px;
     padding: 20px 16px;
     height: 18rem;
-
-    /* Smooth darkening transition on hover */
     transition: background-color 0.2s ease;
 }
 

@@ -86,7 +86,7 @@ p {
 }
 
 .text-and-photo-container {
-    display: flex; /* making this a flexbox, putting all content inside it horizontally instead of vertically*/
+    display: flex; 
     align-items: flex-start;
     margin-top: 3.5rem;
     gap: 2.5rem;
@@ -141,7 +141,7 @@ p {
 .image-biography {
     max-width: 20rem;
     max-height: 25rem;
-    border-radius:12px; /* adds smoother corners */
+    border-radius:12px; 
 }
 
 
@@ -162,7 +162,10 @@ p {
     color: #ddd;
 }
 
+
+
 /* Song list */
+
 .audio-player {
     display: block;
     margin: 1rem auto 2rem;
@@ -231,14 +234,20 @@ p {
     background: #a85c38;
 }
 
+
+
 /* Video */
+
 .youtube-video {
     width: 100%;
     border-radius: 8px;
     height: 40rem;
 }
 
+
+
 /* Objects */
+
 .objects-row {
     display: flex;
     gap: 2rem;
@@ -267,8 +276,8 @@ p {
     font-weight: bold;
     margin-bottom: 1rem;
     position: absolute;
-    bottom: 3rem;   /* distance from bottom */
-    left: 2rem;     /* distance from left */
+    bottom: 3rem;  
+    left: 2rem;     
     color: white;
     
 }
@@ -277,8 +286,8 @@ p {
     font-size: 0.9rem;
     color: white;
     position: absolute;
-    bottom: 1.5rem; /* distance from bottom  */
-    left: 2rem; /* distance from left */
+    bottom: 1.5rem;
+    left: 2rem;
 }
 
 .object-guitar {
@@ -323,14 +332,14 @@ p {
     
 }
 
-/* hover for desktop */
+/* pop-up hover for desktop */
 .objects-unit:hover .object-popup {
     opacity: 1;
     pointer-events: auto;
     text-align: center;
 }
 
-/* click for mobile */
+/* pop-up click for mobile */
 .objects-unit.active .object-popup {
     opacity: 1;
     pointer-events: auto;

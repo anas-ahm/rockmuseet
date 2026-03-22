@@ -60,8 +60,7 @@
 <!-- audio player-->
 
 <div class="content-container-gray-background">
-        
-    <!-- Song player section -->
+    
     <h2 style="text-align: center;margin-top:3rem">Lyt selv med her</h2>
 
     <!-- this audioplayer is used to play and stop songs -->
@@ -96,14 +95,15 @@
 
     function playSong(filePath) {
         
-        // Here we're just saying that if the selected song is already playing and the music isnt pause do nothing
+        // Here we're just saying that if the selected song is already playing and the music is currently playing, do nothing
         if (player.src.includes(filePath) && !player.paused) {
             return;
         }
 
-        player.src = filePath; // if the if statement is met, use the same filePath
-        player.loop = true; // if the if statement is met, repeat the song
-        player.play(); // if the if statement is met, start the song again
+        // if the if statement is false, the script runs the following:
+        player.src = filePath; 
+        player.loop = true; 
+        player.play(); 
     }
 
     //If user clicks on stop, the song pauses with player.pause(), then timer goes back to 0 with player.currentTime = 0
